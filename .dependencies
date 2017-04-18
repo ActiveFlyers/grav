@@ -1,20 +1,54 @@
 git:
     problems:
-        url: https://github.com/getgrav/grav-plugin-problems
+        url: https://github.com/ActiveFlyers/grav-plugin-problems
         path: user/plugins/problems
         branch: master
     error:
-        url: https://github.com/getgrav/grav-plugin-error
+        url: https://github.com/ActiveFlyers/grav-plugin-error
         path: user/plugins/error
         branch: master
     markdown-notices:
-        url: https://github.com/getgrav/grav-plugin-markdown-notices
+        url: https://github.com/ActiveFlyers/grav-plugin-markdown-notices
         path: user/plugins/markdown-notices
         branch: master
     antimatter:
-        url: https://github.com/getgrav/grav-theme-antimatter
+        url: https://github.com/ActiveFlyers/grav-theme-antimatter
         path: user/themes/antimatter
         branch: master
+    email:
+        url: https://github.com/ActiveFlyers/grav-plugin-email
+        path: user/plugins/email
+        branch: master
+    form:
+        url: https://github.com/ActiveFlyers/grav-plugin-form
+        path: user/plugins/form
+        branch: master
+    login:
+        url: https://github.com/ActiveFlyers/grav-plugin-login
+        path: user/plugins/login
+        branch: master
+    admin:
+        url: https://github.com/ActiveFlyers/grav-plugin-admin
+        path: user/plugins/admin
+        branch: master
+    git-sync:
+        url: https://github.com/ActiveFlyers/grav-plugin-git-sync
+        path: user/plugins/git-sync
+        branch: master
+    shoppingcart:
+        url: https://github.com/flaviocopes/grav-plugin-shoppingcart.git
+        path: user/plugins/shoppingcart
+        branch: master
+    shoppingcart-paypal:
+        url: https://github.com/flaviocopes/grav-plugin-shoppingcart-paypal.git
+        path: user/plugins/shoppingcart-paypal
+        branch: master
+    shoppingcart-stripe:
+        url: https://github.com/flaviocopes/grav-plugin-shoppingcart-stripe.git
+        path: user/plugins/shoppingcart-stripe
+        branch: master
+
+
 links:
     problems:
         src: grav-plugin-problems
@@ -31,4 +65,36 @@ links:
     antimatter:
         src: grav-theme-antimatter
         path: user/themes/antimatter
+        scm: github
+    email:
+        src: grav-plugin-email
+        path: user/plugins/email
+        scm: github
+    form:
+        src: grav-plugin-form
+        path: user/plugins/form
+        scm: github
+    login:
+        src: grav-plugin-login
+        path: user/plugins/login
+        scm: github
+    admin:
+        src: grav-plugin-admin
+        path: user/plugins/admin
+        scm: github
+    git-sync:
+        src: grav-plugin-git-sync
+        path: user/plugin/git-sync
+        scm: github
+    shoppingcart:
+        src: grav-plugin-shoppingcart
+        path: user/plugin/shoppingcart
+        scm: github
+    shoppingcart-paypal:
+        src: grav-plugin-shoppingcart-paypal
+        path: user/plugin/shoppingcart-paypal
+        scm: github
+    shoppingcart-stripe:
+        src: grav-plugin-shoppingcart-stripe
+        path: user/plugin/shoppingcart-stripe
         scm: github

@@ -1,0 +1,37 @@
+192.168.1.20:80 {
+    tls off
+    root /var/www/var/grav
+    log /var/www/var/grav/access.log
+    errors /var/www/var/grav/access_err.log
+
+	fastcgi / /run/php5-fpm.sock php
+
+    # Begin - Security
+    # deny all direct access for these folders
+    rewrite {
+        r       /(.git|cache|bin|logs|backups|tests)/.*$
+        to status  403
+    }
+    # deny running scripts inside core system folders
+    rewrite {
+        r       /(system|vendor)/.*\.(txt|xml|md|html|yaml|php|pl|py|cgi|twig|sh|bat)$
+        to status  403
+    }
+    # deny running scripts inside user folder
+    rewrite {
+        r       /user/.*\.(txt|md|yaml|php|pl|py|cgi|twig|sh|bat)$
+        to status  403
+    }
+    # deny access to specific files in the root folder
+    rewrite {
+        r       /(LICENSE.txt|composer.lock|composer.json|nginx.conf|web.config|htaccess.txt|\.htaccess)
+        to status  403
+    }
+    ## End - Security
+
+    # global rewrite should come last.
+    rewrite {
+        to  {path} {path}/ /index.php?_url={uri}&{query}
+    }
+
+}
